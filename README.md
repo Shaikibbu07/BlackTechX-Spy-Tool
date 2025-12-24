@@ -1,197 +1,154 @@
-# BlackTechX Advanced Spy Tool                                         
+🛡️ BLACKTECHX – ADVANCED SPY TOOL
+⚠️⚠️⚠️ IMPORTANT DISCLAIMER – READ CAREFULLY ⚠️⚠️⚠️
 
- [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)                                                        
- [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-orange.svg)](https://github.com/yourusername/BlackTechX-Spy-Tool)                                                         
- [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)                                                   
- [![Status](https://img.shields.io/badge/Status-Development%20Ready-red.svg)](https://github.com/yourusername/BlackTechX-Spy-Tool)           
+🚨 THIS PROJECT IS STRICTLY FOR EDUCATIONAL AND SECURITY RESEARCH PURPOSES ONLY 🚨
 
- > **⚠ WARNING: For Educational and Security Research Purposes Only**   
- >                                                                       
- > This tool is designed for educational purposes, security research,   
- > and authorized penetration testing. **Unauthorized use for malicious   
- > purposes is strictly prohibited and illegal.**                       
+This tool is created ONLY to:
 
- ## 📸 Features                                                         
+Learn how surveillance and malware techniques work
 
- ### Core Surveillance                                                 
- - **Keylogging**: Real-time keystroke capture with special key         
- detection                                                             
- - **Screenshots**: Automatic screen capture with multiple method       
- fallbacks                                                             
- - **Webcam Capture**: Periodic webcam image capture (if available)     
- - **Clipboard Monitoring**: Tracks copied text and sensitive data      
+Perform AUTHORIZED penetration testing
 
- ### Advanced Intelligence                                             
- - **System Information**: Comprehensive hardware and software          
- analysis                                                              
- - **Network Intelligence**: IP addresses, network interfaces,          
- connection details                                                     
- - **File Discovery**: Searches for sensitive files (.txt, .doc, .pdf,  
- etc.)                                                                 
- - **Process Monitoring**: Lists all running processes and system       
- activity                                                              
+Study cybersecurity threats to build better defenses
 
- ### Automated Reporting                                               
- - **Email Auto-Sender**: Compressed data packages sent to specified    
- email                                                                 
- - **Cross-Platform**: Works on Linux, Windows, and macOS               
- - **Persistence**: Auto-start on system boot                           
- - **UTM Virtual Machine Optimized**: Special support for Linux in UTM  
+❌ ANY UNAUTHORIZED USE IS ILLEGAL AND UNETHICAL
+❌ DO NOT use this tool on devices you do not own or do not have explicit permission for
 
- ## 🚀 Quick Start                                                      
+⚖️ The author is NOT responsible for:
 
- ### Installation                                                                                                                      
- # Clone the repository                                                 
- git clone https://github.com/yourusername/BlackTechX-Spy-Tool.git      
- cd BlackTechX-Spy-Tool                                                   
+Misuse of this software
 
- # Install dependencies                                                 
- pip install -r requirements.txt                                        
+Privacy violations
 
- # Configure email settings                                             
- python setup_config.py                                                  
+Legal consequences caused by improper usage
 
+👉 By using this project, you accept full responsibility for your actions.
 
-                             Configuration                              
+📸 FEATURES
+🔹 Core Surveillance
 
- Edit the EMAIL_CONFIG section in spy_tool.py:                           
+Keylogging – Capture real‑time keystrokes
 
+Screenshots – Automatic screen capture at set intervals
 
- EMAIL_CONFIG = {                                                         
-     'smtp_server': 'smtp.gmail.com',                                   
-     'smtp_port': 587,                                                  
-     'sender_email': 'your_email@gmail.com',                            
-     'sender_password': 'your_app_password',  # Use Gmail App Password  
-     'recipient_email': 'recipient_email@gmail.com',                    
-     'email_interval': 300  # Send every 5 minutes                      
- }                                                                     
+Webcam Capture – Periodic webcam snapshots (if available)
 
+Clipboard Monitoring – Tracks copied text
 
-                                 Usage                                 
+🔹 Advanced Intelligence
 
+System Information – Hardware & software details
 
- # Start the spy tool                                                   
- python spy_tool.py                                                     
+Network Intelligence – IP addresses and network interfaces
 
- # View help                                                           
- python spy_tool.py --help                                              
+File Discovery – Search for sensitive files (.txt, .doc, .pdf, etc.)
 
+Process Monitoring – Lists running processes
 
-                                                                       
+🔹 Automated Reporting
 
-                            📋 Requirements                             
+Email Auto‑Sender – Sends compressed data packages
 
-                          System Requirements                           
+Cross‑Platform – Linux, Windows, macOS
 
- • Python 3.8+                                                         
- • Platform: Linux, Windows, macOS                                     
- • Permissions: Administrator/root access recommended                   
+Persistence – Auto‑start on system boot
 
-                          Python Dependencies                           
+UTM Optimized – Special support for Linux in UTM
 
+🚀 QUICK START
+1️⃣ Clone the Repository
+git clone https://github.com/yourusername/BlackTechX-Spy-Tool.git
+cd BlackTechX-Spy-Tool
 
- pynput>=1.7.0      # Keyboard and mouse monitoring                     
- colorama>=0.4.4    # Cross-platform colored terminal output            
- pyautogui>=0.9.53  # Screenshot and automation                         
- pyperclip>=1.8.2   # Clipboard monitoring                              
- opencv-python>=4.5.0  # Webcam capture                                 
- requests>=2.25.0   # Network operations                                
+2️⃣ Install Dependencies
+pip install -r requirements.txt
 
+3️⃣ Configure Email Reporting
 
-                        Linux System Dependencies                        
+Edit spy_tool.py:
 
+EMAIL_CONFIG = {
+    'smtp_server': 'smtp.gmail.com',
+    'smtp_port': 587,
+    'sender_email': 'your_email@gmail.com',
+    'sender_password': 'your_app_password',  # Gmail App Password
+    'recipient_email': 'recipient_email@gmail.com',
+    'email_interval': 300
+}
 
- # For screenshots (choose one)                                         
- sudo apt-get install gnome-screenshot                                  
- sudo apt-get install scrot                                             
- sudo apt-get install imagemagick                                       
+4️⃣ Run the Tool
+python spy_tool.py
 
- # For webcam capture                                                  
- sudo apt-get install python3-opencv                                    
+🔐 GMAIL APP PASSWORD SETUP (REQUIRED)
 
+Gmail DOES NOT allow normal passwords for scripts.
 
-                        ⚙ Configuration Options                         
+Steps:
 
-                         Surveillance Intervals                         
+1️⃣ Go to 👉 https://myaccount.google.com
 
+2️⃣ Open Security
+3️⃣ Enable 2‑Step Verification
+4️⃣ Go to Security → App passwords
+5️⃣ Generate password for Mail
+6️⃣ Copy the 16‑character password and use it in the script
 
- ADVANCED_CONFIG = {                                                    
-     'screenshot_interval': 60,      # Screenshots every 60 seconds     
-     'webcam_interval': 300,         # Webcam capture every 5 minutes   
-     'clipboard_monitor': True,      # Enable clipboard monitoring      
-     'system_info_interval': 600,    # System info every 10 minutes     
-     'network_info': True,           # Collect network information      
-     'process_list': True,           # Monitor running processes        
-     'file_search': True,            # Search for sensitive files       
-     'email_interval': 300           # Email reports every 5 minutes    
- }                                                                     
+⚠️ Never upload real credentials to GitHub.
 
+⚙️ CONFIGURATION OPTIONS
+ADVANCED_CONFIG = {
+    'screenshot_interval': 60,
+    'webcam_interval': 300,
+    'clipboard_monitor': True,
+    'email_interval': 300
+}
 
-                        File Search Configuration                        
+📁 File Search
+file_extensions = ['.txt', '.doc', '.pdf', '.xls', '.csv', '.py', '.js']
 
+# Linux / macOS
+search_directories = ['/home', '/Users']
 
- # File extensions to search for                                        
- 'file_extensions': ['.txt', '.doc', '.docx', '.pdf', '.xls', '.xlsx',  
- '.csv', '.sh', '.py', '.js']                                           
+# Windows
+search_directories = ['C:\\', 'D:\\']
 
- # Directories to search (platform-specific)                           
- 'search_directories': ['/home', '/Users']  # Linux/macOS               
- 'search_directories': ['C:\\', 'D:\\', 'E:\\']  # Windows              
+🔧 SYSTEM REQUIREMENTS
 
+Python 3.8+
 
-                         🔧 Advanced Features                           
+Linux / Windows / macOS
 
-                       UTM Virtual Machine Support                     
+Administrator / root access recommended
 
- • Automatic VM detection                                               
- • Optimized for Linux running in UTM on macOS                          
- • Special handling for virtualized environments                        
- • Enhanced compatibility with virtual hardware                         
+Linux Dependencies
+sudo apt-get install gnome-screenshot scrot imagemagick python3-opencv
 
-                       Cross-Platform Persistence                      
+⚖️ LEGAL & ETHICAL USAGE
+✅ Allowed
 
- • Windows: Registry modification for auto-start                        
- • Linux: Cron jobs and systemd services                                
- • macOS: Launch agents and cron jobs                                   
- • UTM: Virtual machine optimized persistence                           
+Educational learning
 
-                             Data Packaging                             
+Security research
 
- • Compressed ZIP packages for efficient transmission                   
- • All collected data bundled together                                  
- • Timestamped file naming                                              
- • Automatic cleanup after successful transmission                     
+Penetration testing with permission
 
+❌ NOT Allowed
 
-                        ⚠ Legal and Ethical Usage                       
+Unauthorized surveillance
 
-                          Authorized Use Cases                         
+Spying on users
 
- • Security Research: Educational security analysis                     
- • Penetration Testing: Authorized security assessments                 
- • Personal Security: Monitoring your own devices                       
- • Educational Purposes: Learning about security concepts               
+Data theft or privacy invasion
 
-                          Prohibited Activities                        
+📜 FINAL DISCLAIMER
 
- • Unauthorized Surveillance: Monitoring without consent                
- • Data Theft: Stealing sensitive information                           
- • Malicious Activities: Any harmful or destructive use                 
- • Privacy Violations: Capturing data without permission                
+This software is provided “AS IS”, without any warranty.
+The author takes NO responsibility for misuse, damage, or legal issues.
 
-                            Legal Disclaimer                            
+Use responsibly. Think ethically. Learn defensively.
 
+👤 AUTHOR & CONTACT
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,        
- EXPRESS OR                                                             
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF                
- MERCHANTABILITY,                                                       
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT      
- SHALL THE                                                                
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR       
- OTHER                                                                  
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,        
- ARISING FROM,                                                          
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER          
- DEALINGS IN THE                                                        
- SOFTWARE. 
+Made with ❤️ by Ibrahim Shaik
+🎓 Cybersecurity Student
+🔐 Ethical Hacking & Security Research
