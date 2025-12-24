@@ -1,9 +1,11 @@
 
-# 🛡️BlackTechX Advanced Spy Tool
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org) 
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-orange.svg)](https://github.com/yourusername/BlackTechX-Spy-Tool) 
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) 
-[![Status](https://img.shields.io/badge/Status-Development%20Ready-red.svg)](https://github.com/yourusername/BlackTechX-Spy-Tool)
+# BlackTechX Advanced Spy Tool                                         
+
+ [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://python.org)                                                        
+ [![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20Windows%20%7C%20macOS-orange.svg)](https://github.com/yourusername/BlackTechX-Spy-Tool)                                                         
+ [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)                                                   
+ [![Status](https://img.shields.io/badge/Status-Development%20Ready-red.svg)](https://github.com/yourusername/BlackTechX-Spy-Tool)           
+
 #⚠️⚠️⚠️ IMPORTANT DISCLAIMER – READ CAREFULLY ⚠️⚠️⚠️
 
 🚨 THIS PROJECT IS STRICTLY FOR EDUCATIONAL AND SECURITY RESEARCH PURPOSES ONLY 🚨
